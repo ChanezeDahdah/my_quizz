@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Quiz{% endblock %}
+
+{% block body %}
+
+<div class="navbar">
+    <a href="/"><h1 id="title">Quiz</h1></a>
+    <div class="right_side_nav">
+    	{% if app.user %}
+    		<a href="/user/{{ app.user.id }}">Profil</a>
+    		<a href="/logout">Se deconnecter</a>
+    	{% else %}
+    		<a href="/register">S'inscrire</a>
+    		<a href="/login">Se connecter</a>
+		{% endif %}
+	</div>
+</div>
+
+    {% for key, value in historiques %}
+        <p>{{ key }}</p> - <p> : {{ value }}</p><br>
+    {% endfor %}
+
+<footer>
+    <p>® Powerpuff Girlz</p>
+</footer>
+
+{% endblock %}

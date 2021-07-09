@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+:root
+{
+	--index_color: #fec5bb;
+}
+
+
+*
+{
+	margin: 0;
+	padding: 0;
+	font-family: 'Inter', sans-serif;
+	text-decoration: none;
+	outline: none;
+	color: #616161;
+}
+
+html
+{
+	width: 100%;
+	height: 100vh;
+}
+
+.navbar
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	height: 12vh;
+	padding: 0 0 0 1vw;
+	box-shadow: 0px 2px 5px -3px rgba(0,0,0,0.2);
+	background-color: var(--index_color);
+}
+
+#title
+{
+	font-size: 72px;
+}
+
+.right_side_nav
+{
+	display: flex;
+}
+
+.right_side_nav a
+{
+	text-decoration: none;
+	font-size: 24px;
+	margin-bottom: 1vh;
+	margin-right: 1vh;
+	width: 10vw;
+	text-align: center;
+}
+
+.right_side_nav a:hover
+{
+	border-bottom: 2px solid #616161;
+	padding-bottom: 2px;
+	margin-bottom: 0;
+}
+
+.connexion,
+.inscription
+{
+	display: block;
+	margin: 20vh 30vw;
+	border: 4px solid var(--index_color);
+	border-radius: 50px;
+	background-color: #FCF9F8;
+	width: 40%;
+}
+
+.connexion h1,
+.inscription h1
+{
+	text-align: center;
+	margin: 7vh 0 2vh 0;
+}
+
+.connexion form,
+.inscription form
+{
+	text-align: center;
+	margin-bottom: 5vh;
+}
+
+.connexion form input,
+.connexion form button,
+.inscription form input,
+.inscription form button
+
+{
+	font-size: 20px;
+	height: 5vh;
+	border: 3px solid #d8e2dc;
+	margin-bottom: 3vh;
+}
+
+.connexion form input,
+.inscription form input
+{
+	width: 25vw;
+	border-radius: 20px;
+	padding: 5px 10px;
+}
+
+#registration_form_agreeTerms
+{
+	height: 20px;
+	width: 4vw;
+}
+
+.connexion form button, 
+.inscription form button
+{
+	width: 12vw;
+	border-radius: 30px;
+	background-color: #d8e2dc;
+}
+
+.connexion form button:hover,
+.inscription form button:hover
+{
+	background-color: #FFF;
+}
+
+.connexion form a,
+.inscription form a
+{
+	text-decoration: underline;
+}
+
+.connexion form a:hover, 
+.inscription form a:hover
+{
+	font-weight: bolder;
+}
+
+
+.categories
+{
+	margin: 10vh 10vw;
+	display: grid;
+	width: 70vw;
+	grid-template-columns: repeat(3, 1fr);
+	grid-auto-rows: calc(65vw / 3);
+	grid-auto-columns: 10vh;
+	text-align: center;
+}
+
+.categories ul
+{
+
+}
+
+.categories ul li
+{
+	list-style: none;
+	font-size: 26px;
+}
+
+.categories ul li
+{
+	margin-right: 50px;
+}
+
+
+.categories ul li img
+{
+	width: 450px;
+}
+
+.categories ul li img:hover,
+.categories ul li a:hover
+{
+	font-weight: bolder;
+}
+
+footer
+{
+	background-color: var(--index_color);
+	box-shadow: 0px -2px 5px -3px rgba(0,0,0,0.2);
+	height: 7vh;
+	text-align: center;
+}
+
+footer p
+{
+	padding-top: 2.5vh;
+}
+
+.quizz
+{
+	width: 90%;
+	margin: 5vh auto;
+	display: flex;
+
+}
+
+.categorie_name
+{
+	color: #616161;
+	padding: 1vh 1vw 0.5vh 0.5vw;
+}
+
+.quizz_left img
+{
+	width: 30vw;
+}
+
+.quizz_right
+{
+	margin-left: 5vw;
+	text-align: center;
+}	
+
+.question_reponse
+{
+	box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.05);
+	padding: 20px;
+	border-radius: 20px;
+	margin: 6.5vh;
+	background-color: #FFF;
+	text-align: left;
+	width: 900px;
+}
+
+.question_reponse h3
+{
+	font-size: 23px;
+	font-weight: normal;
+}
+
+.question_reponse li
+{
+	font-size: 20px;
+	margin-top: 2vh;
+}
+
+.question_reponse li:hover
+{
+	font-weight: bold;
+}
+
+ .question_reponse button:hover
+ {
+ 	background-color: #FCFCFC;
+ }
+
+.error
+{
+	text-align: center;
+	margin-top: 15vh;
+}
+
+ .error h1
+ {
+ 	font-size: 400px;
+ 	color: var(--index_color);
+ 	text-shadow: 0px 0px 7px rgba(150, 150, 150, 0.3);
+ }
+
+ .error p
+ {
+ 	font-size: 30px;
+ }
+
+ .resultats
+ {
+ 	margin: 27.8vh 0;
+ 	text-align: center;
+ }
+
+.result
+{
+	font-size: 150px;
+	color: var(--index_color);
+}
+
+.resultats h3
+{
+	font-size: 26px;
+}

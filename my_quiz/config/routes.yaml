@@ -1,0 +1,7 @@
+index:
+   path: /
+   controller: App\Controller\IndexController::index
+
+profile:
+  path: /user
+  controller: App\Controller\UserController::user_index

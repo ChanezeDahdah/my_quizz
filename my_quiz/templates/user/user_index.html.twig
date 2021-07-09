@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Profil{% endblock %}
+
+{% block body %}
+    <h1>Profil</h1>
+
+    <div class="infos">
+        <li>
+        {% for user in users %}
+            <ul>{{ user.email }}</ul>
+            <ul>•••••••••</ul>
+            <a href="{{ path('user_edit', {'id': user.id}) }}">Modifier</a>
+        {% endfor %}
+        </li>
+    </div>
+{% endblock %}

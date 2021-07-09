@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello QuizzController!{% endblock %}
+
+{% block body %}
+
+<div class="navbar">
+    <a href="/"><h1 id="title">Quiz</h1></a>
+    <div class="right_side_nav">
+        {% if app.user %}
+            <a href="/user/{{ app.user.id }}">Profil</a>
+            <a href="/logout">Se deconnecter</a>
+        {% else %}
+            <a href="/register">S'inscrire</a>
+            <a href="/login">Se connecter</a>
+        {% endif %}
+    </div>
+</div>
+
+<div class="quizz">
+    <div class="quizz_left">
+        <h1 class="categorie_name">{{ categorie.name }}</h1>
+        <img src="{{ asset('icons/' ~ categorie.img) }}">
+    </div>
+    <div class="quizz_right">
+
+        <form action="/quizz/fin/resultat" method="POST">
+        <input type="hidden" name="name" value="{{ categorie.name }}">
+       
+        {% for question in questions %}
+            <div class="question_reponse">
+                <h3>{{ question.question }}</h3>
+                <ul>
+                    {% for reponses in question.getReponses() %}
+
+                    <li>
+                        <input type="radio" id="reponse{{ reponses.id }}" name="reponse{{ question.id }}" value="{{ reponses.reponseExpected }}" required />
+                        <label for="reponse{{ reponses.id }}">{{ reponses.reponse }}</label>
+                    </li>
+
+                {% endfor %}
+            </div>
+                </ul>
+           
+        {% else %}
+            <ul>
+                <li>no records found</li>
+            </ul>
+        {% endfor %}
+        <button class="valider">Valider</button>
+        </form>
+       
+
+
+        <a href="/"><p>Retour</p></a>
+    </div>
+
+</div>
+{% endblock %}

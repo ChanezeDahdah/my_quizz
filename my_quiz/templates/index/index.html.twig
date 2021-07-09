@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Quiz{% endblock %}
+
+{% block body %}
+
+<div class="navbar">
+    <a href="/"><h1 id="title">Quiz</h1></a>
+    <div class="right_side_nav">
+    	{% if app.user %}
+    		<a href="/user">Profil</a>
+    		<a href="/logout">Se deconnecter</a>
+    	{% else %}
+    		<a href="/register">S'inscrire</a>
+    		<a href="/login">Se connecter</a>
+		{% endif %}
+	</div>
+</div>
+
+    <div class="categories">
+        {% for categorie in categories %}
+            <ul>
+                <li><a href="quizz/{{ categorie.name }}"><img src="{{ asset('../public/icons' ~ categorie.img) }}">{{ categorie.name }}</a></li>
+            </ul>
+        {% else %}
+            <ul>
+                <li>no records found</li>
+            </ul>
+        {% endfor %}
+    </div>
+
+<footer>
+    <p>® Powerpuff Girlz</p>
+</footer>
+
+{% endblock %}
